@@ -29,7 +29,98 @@ int main(void)
     UBMP4_config();             // Configure on-board UBMP4 I/O devices
 	
     // Code in this while loop runs repeatedly.
-    while(1)
+    
+    if(SW2 == 0)
+    {
+        LED3 = 1;
+        __delay_ms(250);
+        LED3 = 0;
+        __delay_ms(100);
+        LED4 = 1;
+        __delay_ms(250);
+        LED4 = 0;
+        __delay_ms(100);
+        LED5 = 1;
+        __delay_ms(250);
+        LED5 = 0;
+        __delay_ms(100);
+        LED6 = 1;
+        __delay_ms(250);
+        LED6 = 0;
+        __delay_ms(100);
+    }
+
+    if(SW3 == 0)
+    {
+        LED3 = 1;
+        __delay_ms(100);
+        LED3 = 0;
+        __delay_ms(100);
+        LED3 = 1;
+        __delay_ms(100);
+        LED3 = 0;
+        __delay_ms(100);
+        LED4 = 1;
+        __delay_ms(100);
+        LED4 = 0;
+        __delay_ms(100);
+        LED4 = 1;
+        __delay_ms(100);
+        LED4 = 0;
+        __delay_ms(100);
+        LED5 = 1;
+        __delay_ms(100);
+        LED5 = 0;
+        __delay_ms(100);
+        LED5 = 1;
+        __delay_ms(100);
+        LED5 = 0;
+        __delay_ms(100);
+        LED6 = 1;
+        __delay_ms(100);
+        LED6 = 0;
+        __delay_ms(100);
+        LED6 = 1;
+        __delay_ms(100);
+        LED6 = 0;
+        __delay_ms(100);
+    }
+  
+    if(SW4 == 0)
+    {
+        LED3 = 1;
+        LED4 = 1;
+        LED5 = 1;
+        LED6 = 1;
+    }
+
+    if(SW5 == 0)
+    {
+        LED3 = 1;
+        __delay_ms(50);
+        LED3 = 0;
+        __delay_ms(50);
+        LED4 = 1;
+        __delay_ms(50);
+        LED4 = 0;
+        __delay_ms(50);
+        LED5 = 1;
+        __delay_ms(50);
+        LED5 = 0;
+        __delay_ms(50);
+        LED6 = 1;
+        __delay_ms(50);
+        LED6 = 0;
+        __delay_ms(50);
+    }
+
+      if(SW1 == 0)
+        {
+            RESET();
+        }
+    
+    
+    /*   while(1)
 	{
         // If SW2 is pressed, make a flashy light pattern
         if(SW2 == 0)
@@ -50,7 +141,7 @@ int main(void)
             __delay_ms(100);
             LED6 = 0;
             __delay_ms(100);
-        }
+        } 
         
         // Add code for your Program Analysis and Programming Activities here:
         if(SW3 == 0)
@@ -65,16 +156,14 @@ int main(void)
             __delay_ms(50);
             LED3 = 0;
             LED6 = 0;
-        }
-
-        }
+        } 
 
         // Activate bootloader if SW1 is pressed.
         if(SW1 == 0)
         {
             RESET();
         }
-    }
+    }                                                        */
 }
 
 /* Program Analysis
@@ -82,9 +171,11 @@ int main(void)
  * 1. How many times do the LEDs flash if SW2 is quickly pressed and released?
  *    Do the LEDs keep flashing when SW2 is held? Look at the program and
  *    explain why this happens when SW2 is held.
+         The leds only flash if sw2 is pressed and will flash for as long as it is held
  * 
  * 2. Explain the difference between the statements: LED3 = 0; and LED3 = 1;
- * 
+ *      Led3 = 0 outputs 0V 
+
  * 3. What voltage do you expect the microcontroller to output to LED D3 when
  *    the statement LED3 = 0; runs? What voltage do you expect the output to be
  *    when the statement LED3 = 1; runs?
