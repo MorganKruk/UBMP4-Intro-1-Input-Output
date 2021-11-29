@@ -171,14 +171,18 @@ int main(void)
  * 1. How many times do the LEDs flash if SW2 is quickly pressed and released?
  *    Do the LEDs keep flashing when SW2 is held? Look at the program and
  *    explain why this happens when SW2 is held.
-         The leds only flash if sw2 is pressed and will flash for as long as it is held
+         
+        The leds only flash if sw2 is pressed and will flash for as long as it is held
  * 
  * 2. Explain the difference between the statements: LED3 = 0; and LED3 = 1;
- *      Led3 = 0 outputs 0V 
+ *     
+        Led3 = 0 outputs 0V 
 
  * 3. What voltage do you expect the microcontroller to output to LED D3 when
  *    the statement LED3 = 0; runs? What voltage do you expect the output to be
  *    when the statement LED3 = 1; runs?
+       
+        5V
  * 
  *    You can confirm the output voltage with a voltmeter if you have access
  *    to one. If you tried that, did the voltage match your prediction?
@@ -186,6 +190,8 @@ int main(void)
  * 4. The statement 'if(SW2 == 0)' uses two equal signs, while the statement
  *    'LED3 = 1;' uses a single equal sign. What operation is performed by one
  *    equal sign? What operation is performed by two equal signs?
+      
+        two equal signs means comparing, and true and false.
  * 
  * 5. The following program code includes instructions that write to the PORTC
  *    output latches directly. Try it by copying and pasting this code below
@@ -202,6 +208,9 @@ int main(void)
  *    What happens when pushbutton SW3 is pressed? Identify at least one
  *    advantage and one disadvantage of controlling the LEDs using 'LATC' writes
  *    rather than through individual 'LEDn = x;' statements.
+
+        if SW3 is pressed all four lights turn on, the advandtages of this is that its a quick way to turn all the lights on,
+        the disadvantages of this is that you can't turn the lights on individually, you'd have to code each light.
  * 
  * 6. Next, compare the operation of 'if' and 'while' structures to simulate
  *    momentary buttons. Replace the code you added in 5, above, with this code:
